@@ -9,13 +9,15 @@
     }
   ],
   "scripts": {
-    "lint": "eslint index.js"
+    "lint": "eslint index.js",
+    "test": "yarn run lint && jest -u --detectOpenHandles"
   },
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=5.0.0"
   },
   "dependencies": {
+    "async-cache": "^1.1.0",
     "fs-extra": "^7.0.1",
     "yandex-market-language": "^0.3.0"
   },
@@ -25,12 +27,30 @@
     "eslint-plugin-import": "^2.15.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.0.0",
+    "nuxt": "^2.3.4",
+    "request-promise-native": "^1.0.5"
   },
   "license": "MIT",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/fixture"
+    ],
+    "testEnvironment": "node",
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    }
   },
   "repository": {
     "type": "git",
