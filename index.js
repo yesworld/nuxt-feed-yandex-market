@@ -14,10 +14,6 @@ const defaultOptions = {
 export default async function yandexMarket () {
   const options = Object.assign(defaultOptions, this.options.yandexMarket)
 
-  if (typeof options.data === 'function') {
-    options.data = await options.data()
-  }
-
   const feedCache = new AsyncCache({
     load (key, callback) {
       generate(options, callback)
@@ -51,7 +47,9 @@ export default async function yandexMarket () {
   async function generate (options, callback) {
     let xml
     try {
-      xml = yml(options.data, { validate: options.validate })
+      let data = (typeof options.data === 'function') ? await options.data() : options.data
+
+      xml = yml(data, { validate: options.validate })
         .end({ pretty: true })
     } catch (err) /* istanbul ignore next */ {
       console.error('⚠️ Error while executing module yandex-market-language')
