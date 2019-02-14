@@ -1,5 +1,6 @@
 # A Nuxt.js module that generates an XML file for Yandex.Market (YML)
-[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 A wrapper over [Yandex Market Language(YML)](https://github.com/LotusTM/yandex-market-language) that generates a JSON object into the xml file. The module supports Nuxt 2.x. There is `yarn run generate` support. 
 
@@ -26,4 +27,4 @@ export default {
 
 [MIT License](./LICENSE)
 
-Copyright (c) Akhmedshin Damir
+Copyright (c) @yesworld

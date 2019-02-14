@@ -3,7 +3,7 @@ const config = require('./fixture/nuxt.config')
 const path = require('path')
 const fs = require('fs-extra')
 const oldFs = require('fs')
-const timeout = 60 * 1000
+const timeout = 180 * 1000
 const urlFeed = '/yandex-market.xml'
 
 describe('generate', async () => {
