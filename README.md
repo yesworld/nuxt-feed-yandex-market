@@ -2,7 +2,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-A wrapper over [Yandex Market Language(YML)](https://github.com/LotusTM/yandex-market-language) that generates a JSON object into the xml file. The module supports Nuxt 2.x. There is `yarn run generate` support. 
+A wrapper over [Yandex Market Language(YML)](https://github.com/LotusTM/yandex-market-language) that generates a JSON object into the xml file, heavily inspired by [nuxt-community/feed-module](https://github.com/nuxt-community/feed-module). The module supports Nuxt 2.x. There is `yarn run generate` support.
 
 ## Simple usage
 
@@ -27,4 +27,4 @@ export default {
 
 [MIT License](./LICENSE)
 
-Copyright (c) @yesworld
+Copyright (c) :suspect: @yesworld

@@ -5,8 +5,9 @@ const fs = require('fs-extra')
 const oldFs = require('fs')
 const timeout = 180 * 1000
 const urlFeed = '/yandex-market.xml'
+const PORT = 3777
 
-describe('generate', async () => {
+describe('generate', () => {
   test('generate xml', async (done) => {
     const nuxt = new Nuxt(config)
     const filePath = path.resolve(nuxt.options.srcDir, path.join('static', urlFeed))
@@ -30,13 +31,14 @@ describe('generate', async () => {
 describe('universal', () => {
   const request = require('request-promise-native')
 
-  const url = path => `http://localhost:3000${path}`
+  const url = path => `http://localhost:${PORT}${path}`
   const get = path => request(url(path))
 
   test('check xml', async (done) => {
     let nuxt = new Nuxt(config)
-    new Builder(nuxt).build()
-    nuxt.listen(3000)
+    await nuxt.ready()
+    await new Builder(nuxt).build()
+    nuxt.listen(PORT)
 
     const filePath = path.resolve(nuxt.options.srcDir, path.join('static', urlFeed))
     if (oldFs.existsSync(filePath)) {
