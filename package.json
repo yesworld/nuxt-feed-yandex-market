@@ -19,7 +19,8 @@
   "dependencies": {
     "async-cache": "^1.1.0",
     "fs-extra": "^7.0.1",
-    "yandex-market-language": "^0.3.0"
+    "yandex-market-language": "^0.3.0",
+    "moment": "^2.19.3"
   },
   "devDependencies": {
     "eslint": "^5.12.1",
