@@ -1,6 +1,6 @@
 {
   "name": "nuxt-feed-yandex-market",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "A Nuxt.js module that generates an YML file. Example for Yandex.Market",
   "contributors": [
     {
@@ -20,7 +20,7 @@
     "async-cache": "^1.1.0",
     "fs-extra": "^10.0.0",
     "yandex-market-language": "^0.4.1",
-    "moment": "^2.19.3"
+    "moment": "^2.29.1"
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.14.5",
@@ -31,7 +31,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
     "jest": "^25.5.4",
-    "nuxt": "^2.3.4",
+    "nuxt": "^2.15.7",
     "request-promise-native": "^1.0.5"
   },
   "license": "MIT",
