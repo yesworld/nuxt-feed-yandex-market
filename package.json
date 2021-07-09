@@ -1,7 +1,7 @@
 {
   "name": "nuxt-feed-yandex-market",
-  "version": "0.4.3",
-  "description": "A Nuxt.js module that generates an XML file for Yandex.Market",
+  "version": "0.4.4",
+  "description": "A Nuxt.js module that generates an YML file. Example for Yandex.Market",
   "contributors": [
     {
       "name": "yesworld",
@@ -9,8 +9,8 @@
     }
   ],
   "scripts": {
-    "lint": "eslint index.js",
-    "test": "yarn run lint && jest -u --detectOpenHandles"
+    "lint": "eslint --fix index.js",
+    "test": "npm run lint && jest -u --detectOpenHandles"
   },
   "engines": {
     "node": ">=8.0.0",
@@ -18,18 +18,19 @@
   },
   "dependencies": {
     "async-cache": "^1.1.0",
-    "fs-extra": "^7.0.1",
-    "yandex-market-language": "^0.3.0",
+    "fs-extra": "^10.0.0",
+    "yandex-market-language": "^0.4.1",
     "moment": "^2.19.3"
   },
   "devDependencies": {
-    "eslint": "^5.12.1",
-    "eslint-config-standard": "^12.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.14.5",
+    "eslint": "^7.30.0",
+    "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.15.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "jest": "^24.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "jest": "^25.5.4",
     "nuxt": "^2.3.4",
     "request-promise-native": "^1.0.5"
   },

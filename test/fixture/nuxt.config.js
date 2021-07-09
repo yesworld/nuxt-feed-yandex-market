@@ -11,7 +11,7 @@ module.exports = {
   modules: ['@@'],
   yandexMarket: {
     path: '/yandex-market.xml',
-    cacheTime: 1000 * 3600,
+    cacheTime: 0,
     validate: true,
     data () {
       /* Ajax */

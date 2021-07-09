@@ -47,7 +47,7 @@ export default async function yandexMarket () {
   async function generate (options, callback) {
     let xml
     try {
-      let data = (typeof options.data === 'function') ? await options.data() : options.data
+      const data = (typeof options.data === 'function') ? await options.data() : options.data
 
       xml = yml(data, { validate: options.validate })
         .end({ pretty: true })
