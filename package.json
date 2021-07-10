@@ -1,6 +1,6 @@
 {
   "name": "nuxt-feed-yandex-market",
-  "version": "0.4.5",
+  "version": "1.0.0",
   "description": "A Nuxt.js module that generates an YML file. Example for Yandex.Market",
   "contributors": [
     {

@@ -14,12 +14,44 @@ export default {
   modules: [
     'nuxt-feed-yandex-market'
   ],
-  yandexMarket: {
+  // @deprecated use feedYml
+  yandexMarket: {},
+  feedYml: {
     data: {}, // JSON with data or a function that returns the JSON 
     path: '/yandex-market.xml', // The route to your xml file
     validate: true,
     cacheTime: 1000 * 3600 * 24 
   }
+}
+```
+
+or
+
+```js
+export default {
+  modules: [
+    'nuxt-feed-yandex-market'
+  ],
+  feedYml: [
+    {
+      async data () {
+        // await axios
+        return {
+          name: 'SuperShop',
+          company: 'Tne Best inc.',
+          url: 'https://yesworld.github.io/portfolio/',
+          ...
+        }
+      },
+      path: '/yandex-market.xml',
+      validate: true,
+      cacheTime: 1000 * 3600 * 24
+    },
+    {
+      data: {},
+      path: '/aliexpress.xml'
+    }
+  ]
 }
 ```
 
