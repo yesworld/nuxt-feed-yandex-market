@@ -31,7 +31,7 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
     "jest": "^25.5.4",
-    "nuxt": "^2.15.7",
+    "nuxt": "^3.4.3",
     "request-promise-native": "^1.0.5"
   },
   "license": "MIT",
